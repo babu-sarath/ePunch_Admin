@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TodayRecord"
+    android:background="#F3F3F3"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="23dp"
+        android:padding="15dp"
+        android:drawableStart="@drawable/ic_back"
+        android:drawablePadding="8dp"
+        android:onClick="goBack"
+        android:fontFamily="@font/robotobold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Attendance" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2B1EDF"
+        android:paddingTop="15dp"
+        android:paddingBottom="35dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/dayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
+            android:textColor="@android:color/white"
+            android:text="MONDAY"/>
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
+            android:textColor="@android:color/white"
+            android:text="07 JUNE 2020"/>
+        <TextView
+            android:id="@+id/timeTv"
+            android:fontFamily="@font/robotobold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="60dp"
+            android:text="10:10 am"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotomedium"
+        android:text="Not punched in"/>
+
+    <TextView
+        android:id="@+id/notPunchedIn"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotolight"
+        android:text="None"/>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotomedium"
+        android:text="Punched in"/>
+    <ListView
+        android:layout_margin="15dp"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/card" />
+    <TextView
+        android:id="@+id/empty_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:textSize="20dp"
+        android:fontFamily="@font/robotomedium"
+        android:padding="15dp"
+        android:text="No one found  :(" >
+    </TextView>
+</LinearLayout>

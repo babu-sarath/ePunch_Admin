@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewEmployee"
+    android:background="#F3F3F3"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="23dp"
+        android:padding="25dp"
+        android:drawableStart="@drawable/ic_back"
+        android:drawablePadding="8dp"
+        android:onClick="goBack"
+        android:fontFamily="@font/robotobold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Employee" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="25dp">
+        <EditText
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search employee"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
+            android:layout_marginBottom="15dp"
+            android:text="Employees"/>
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/card" />
+        <TextView
+            android:id="@+id/empty_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:fontFamily="@font/robotomedium"
+            android:padding="15dp"
+            android:text="Nothing found  :(" >
+        </TextView>
+    </LinearLayout>
+</LinearLayout>
