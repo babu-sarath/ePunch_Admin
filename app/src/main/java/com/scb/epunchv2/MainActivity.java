@@ -50,10 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
         email=findViewById(R.id.email);
         pwd=findViewById(R.id.pwd);
-        retryPolicy=new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+//        retryPolicy=new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        retryPolicy=new DefaultRetryPolicy(0, -1, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
         sharedPrefClass=new SharedPrefClass(this);
-        progressDialog=new ProgressDialog(MainActivity.this);
+        progressDialog=new ProgressDialog(MainActivity.this,R.style.CustomAlertDialog);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Authenticating...");
     }

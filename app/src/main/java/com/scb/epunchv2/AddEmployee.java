@@ -47,7 +47,7 @@ public class AddEmployee extends AppCompatActivity {
         pwd2=findViewById(R.id.pwd2);
         position=findViewById(R.id.position);
         sharedPrefClass=new SharedPrefClass(getApplicationContext());
-        progressDialog=new ProgressDialog(AddEmployee.this);
+        progressDialog=new ProgressDialog(AddEmployee.this,R.style.CustomAlertDialog);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Creating new employee");
     }
@@ -119,7 +119,8 @@ public class AddEmployee extends AppCompatActivity {
         };
 
         //retry the stuff
-        RetryPolicy retryPolicy=new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+//        RetryPolicy retryPolicy=new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        RetryPolicy retryPolicy=new DefaultRetryPolicy(0, -1, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         jsonObjectRequest.setRetryPolicy(retryPolicy);
 
         //adding the request

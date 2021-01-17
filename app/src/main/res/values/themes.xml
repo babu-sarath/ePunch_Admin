@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="CustomAlertDialog" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/alert_background</item>
+        <item name="android:textColor">@color/black</item>
+    </style>mani
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
 </resources>

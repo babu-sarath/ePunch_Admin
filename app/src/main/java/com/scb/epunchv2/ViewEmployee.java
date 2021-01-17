@@ -70,8 +70,9 @@ public class ViewEmployee extends AppCompatActivity {
         search=findViewById(R.id.search);
         empty_list_item=findViewById(R.id.empty_list_item);
         sharedPrefClass=new SharedPrefClass(getApplicationContext());
-        retryPolicy=new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        progressDialog=new ProgressDialog(ViewEmployee.this);
+//        retryPolicy=new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        retryPolicy=new DefaultRetryPolicy(0, -1, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        progressDialog=new ProgressDialog(ViewEmployee.this,R.style.CustomAlertDialog);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Retrieving data");
 

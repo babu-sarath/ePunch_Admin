@@ -8,16 +8,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.scb.epunchv2.Adapters.AdminHomeAdapter;
 import com.scb.epunchv2.UtilsService.SharedPrefClass;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Home extends AppCompatActivity {
@@ -49,7 +45,7 @@ public class Home extends AppCompatActivity {
                         break;
                     case 2: startActivity(new Intent(Home.this,TodayRecord.class));
                         break;
-                    case 3: startActivity(new Intent(Home.this,AttendanceEmployee.class));
+                    case 3: startActivity(new Intent(Home.this, AttendanceEmployeeList.class));
                         break;
                 }
             }
